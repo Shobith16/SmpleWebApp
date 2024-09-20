@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    width: 100vw;
+    height: fit-content;
+
+    .add-course-form{
+        padding: 2%;
+        // background-color: bisque;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 10;
+        margin: 2%;
+        width: 30%;
+        line-height: 2;
+
+        label{
+            color: grey;
+        }
+        input{
+            padding: 2%;
+            border: 1px solid #f0f0f0;
+            border-radius: 3px;
+
+        }
+        #submit:hover{
+            background-color: rgb(81, 106, 248);
+            color: #f0f0f0;
+            cursor: pointer;
+        }
+    }
+
+
+}

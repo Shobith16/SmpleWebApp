@@ -1,0 +1,107 @@
+// Define any variables if needed
+$background-color-main: bisque;
+$background-color-sub1: cadetblue;
+$background-color-nav: rgb(46, 45, 45);
+$color-text: aliceblue;
+$color-text-secondary: grey;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .main {
+    width: 100vw;
+    height: 100vh;
+    // background-color: $background-color-main;
+  
+  
+    .sub-1 {
+      width: 100%;
+      height: fit-content;
+    //   background-color: $background-color-sub1;
+    
+    
+        nav {
+          width: 99%;
+          height: fit-content;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 2%;
+          padding: 1%;
+          background-color: $background-color-nav;
+        
+             li {
+              color: $color-text-secondary;
+              list-style: none;
+              cursor: pointer;
+              
+              a{
+                text-decoration: none;
+                color:$color-text-secondary;
+              }
+              a:hover{
+                color: $color-text;
+              }
+              h1 {
+                color: $color-text;
+              }
+            }
+        }
+    }
+
+    .sub-2{
+        width: 100%;
+        padding:2%;
+        // background-color: $color-text-secondary;
+        // gap:10px;
+
+        #search{
+            width: 30%;
+            padding: .5%;
+            border-radius: 3px;
+            border:2px solid #f0f0f0;
+            margin-right:1px;
+
+
+        }
+        #searchbtn{
+            margin-left: 1px;
+            padding: .5%;
+            border-radius: 3px;
+            border:1px solid white;
+            cursor: pointer;
+        }
+    }
+    .sub-3{
+        width:100%;
+        padding: 2%;
+        ul{
+            width:30%;
+            padding: .6%;
+            line-height: 4vh;
+           
+            li{
+                padding-left: 10%;
+                list-style: none;
+                border:1.8px solid  #f0f0f0;
+                font-weight: 540;
+
+            }
+        }
+        .removeall{
+            padding: .5%;
+            background-color: rgb(235, 0, 0);
+            border:1px solid red;
+            border-radius: 3px;
+            color:#f0f0f0;
+            cursor: pointer;
+        }
+    }
+    // .highlight {
+    //   background-color: yellow;
+    // }
+}

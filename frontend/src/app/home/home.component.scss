@@ -1,0 +1,248 @@
+// Define any variables if needed
+$background-color-main: bisque;
+$background-color-sub1: cadetblue;
+$background-color-nav: rgb(46, 45, 45);
+$color-text: aliceblue;
+$color-text-secondary: grey;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .main {
+    width: 100vw;
+    height: 100vh;
+    // background-color: $background-color-main;
+  
+  
+    .sub-1 {
+      width: 100%;
+      height: fit-content;
+    //   background-color: $background-color-sub1;
+    
+    
+        nav {
+          width: 99%;
+          height: fit-content;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 2%;
+          padding: 1%;
+          background-color: $background-color-nav;
+        
+             li {
+              color: $color-text-secondary;
+              list-style: none;
+              cursor: pointer;
+            
+              h1 {
+                color: $color-text;
+              }
+            }
+        }
+    }
+
+    .sub-2{
+        width: 100%;
+        padding:2%;
+        // background-color: $color-text-secondary;
+        // gap:10px;
+
+        #search{
+            width: 30%;
+            padding: .5%;
+            border-radius: 3px;
+            border:2px solid #f0f0f0;
+            margin-right:1px;
+
+
+        }
+        #searchbtn{
+            margin-left: 1px;
+            padding: .5%;
+            border-radius: 3px;
+            border:1px solid white;
+            cursor: pointer;
+        }
+        #searchbtn:hover{
+            border:1px solid rgb(81, 106, 248);
+            background-color: rgb(81, 106, 248);
+            color: #f0f0f0;
+        }
+    }
+    .sub-3{
+        display: grid;
+        grid-template-columns: 50% auto;
+        gap: 3;
+
+        .sub-3-1{
+            width:100%;
+            padding: 2%;
+            ul{
+                width:50%;
+                padding: 1%;
+                line-height: 4vh;
+            
+                li{
+                    padding-left: 10%;
+                    list-style: none;
+                    border:1.8px solid  #f0f0f0;
+                    font-weight: 540;
+
+                }
+                li:hover{
+                    background-color: rgb(81, 106, 248);
+                    color: #f0f0f0;
+                    cursor: pointer;
+                }
+            }
+            .removeall{
+                padding: 2%;
+                background-color:#f0f0f0;
+                border:1px solid #f0f0f0;
+                border-radius: 3px;
+                color:#080808;
+                cursor: pointer;
+            }
+            .removeall:hover{
+                background-color: rgb(248, 101, 81);
+                border:1px solid rgb(248, 101, 81);
+                color:#f0f0f0;
+            }
+            #del-all-warn{
+                width: 45%;
+                height: 40%;
+                padding: 10%; 
+                position: absolute;
+                top: 30%;
+                left: 30%;
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                border: 1px solid #f0f0f0;
+                border-radius: 3px;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+                display: none;
+
+                h2{
+                    position: relative;
+                    bottom: 3vh; 
+                }
+                .confirm{
+                    position: relative;
+                    top: 2vh;
+                   display: flex;
+                   justify-content: center;
+                   align-items: center;
+                   gap: 10px;
+                    #yes,#no{
+                        width: 4vw;
+                        padding: 3%;
+                        border: 1px solid #f0f0f0;
+                        border-radius: 3px;
+                        margin-right: 2%;
+                    }
+                    #yes:hover{
+                        background-color: rgb(93, 219, 68);
+                        color: #f0f0f0;
+                        cursor: pointer;
+                    }
+                    #no:hover{
+                        background-color: rgb(248, 115, 81);
+                        color: #f0f0f0;
+                        cursor: pointer;
+                    }
+                }
+                
+
+            }
+        }
+        .sub-3-2{
+            .displayinfo{
+                display:none;
+                // background-color: bisque;
+                width: 50%;
+                padding: 2%;
+                border: 1px solid #f0f0f0;
+                border-radius: 3px;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+            }
+            @media screen and (max-width: 700px) {
+                .displayinfo{
+                    width: auto;
+                }
+            }
+            #close,#delete,#edit{
+                padding: 4%;
+                border: 1px solid #f0f0f0;
+                border-radius: 3px;
+                margin-right: 2%;
+            
+            }
+            #delete:hover{
+                background-color: rgb(81, 106, 248);
+                color: #f0f0f0;
+                cursor: pointer;
+            }
+            #edit:hover{
+                background-color: rgb(81, 106, 248);
+                color: #f0f0f0;
+                cursor: pointer;
+            }
+            #close:hover{
+                background-color: rgb(248, 101, 81);
+                color: #f0f0f0;
+                cursor: pointer;
+            }
+            ul{
+                padding: 2%;
+            }
+            #editinfo{
+                
+                display: flex;
+                flex-direction: column;
+                gap: 10;
+                margin: 2%;
+                width: 30%;
+                line-height: 2;
+                display: none;
+                label{
+                    color: grey;
+                }
+                #cancel,#update,input{
+                    padding: 6%;
+                    border: 1px solid #f0f0f0;
+                    border-radius: 3px;
+                
+                }
+                #cancel:hover,#update:hover{
+                    background-color: rgb(81, 106, 248);
+                    color: #f0f0f0;
+                    cursor: pointer;
+                }
+            }
+            li{
+                font-weight: 800;
+                list-style: none;
+                line-height: 5;
+            }
+            p{
+                font-weight: 400;
+                
+                // width: 80%;
+                line-height: normal;
+            }
+            span{
+                color:grey;
+            }
+        }
+        
+    }
+}

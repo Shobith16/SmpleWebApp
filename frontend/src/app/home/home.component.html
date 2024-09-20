@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebTutorial</title>
+</head>
+<body>
+    <div class="main">
+         
+      <div class="sub-2">
+        <input type="search" name="search" id="search" placeholder="Search by Title" #searchInput (input)="search()">
+      </div>
+          <div class="sub-3">
+            <div class="sub-3-1">
+              <h1>Available Cources :</h1>
+              <br><br>
+              <ul id="listoC">
+                <li *ngFor="let tutorial of tutorials" (click)="displayinfo(tutorial.Title, tutorial.Desc, tutorial.Author, tutorial.Cost,tutorial._id)">
+                  {{ tutorial.Title }}
+                </li>
+                           
+              </ul>
+              <br>
+
+              <button class="removeall" (click)="remove()">Remove All</button>
+              <div id="del-all-warn">
+                <h2>Are You Shure You Want to Delete All The Courses!</h2>
+                <div class="confirm">
+                  <button id="yes">Yes</button>
+                  <button id="no">No</button>
+                </div>
+              </div>
+            </div>
+            <div class="sub-3-2">
+                <div #courseInfo class="displayinfo">
+                  <h1>Details :</h1>
+                  <br>
+                  <ul id="info">
+                    <li>Title : <span id="title">Angular</span></li>
+                    <li>Desc : <span ><p id="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur fugiat unde sit. Placeat voluptates nisi perferendis eaque dolorem quasi neque minus? Molestiae ducimus accusantium nemo, vel ipsum ipsa similique necessitatibus!</p></span></li>
+                    <li>Author : <span id="author">Ammg</span></li>
+                    <li>Cost : <span id="cost">Rs.2000</span></li>
+                    
+                  </ul>
+                  <ul id="editinfo" >
+                    
+                      <label for="Etitle">Title:</label>
+                      <input type="text" id="Etitle" name="Etitle" placeholder="Enter the title ex: Angular Course" ngModel required>
+                      <br>
+                  
+                      <label for="Edesc">Description:</label>
+                      <input type="text" name="desc" id="Edesc" placeholder="Enter the Description" ngModel required>
+                      <br>
+                  
+                      <label for="Eauthor">Author:</label>
+                      <input type="text" name="author" id="Eauthor" placeholder="Enter Author name" ngModel required>
+                      <br>
+                  
+                      <label for="Ecost">Cost:</label>
+                      <input type="text" name="cost" id="Ecost" placeholder="Enter the cost" ngModel required>
+                      <br>
+                  
+                      <button  id="update">Save</button>
+                      <button  id="cancel">Cancel</button>
+                 
+                  
+                  <br><br>
+                  <div id="warn"></div>
+                    
+                  </ul>
+                  <div class="options">
+                    <button id="delete" >Delete</button>
+                    <button id="edit">Edit</button>
+                    <button id="close" (click)="close()">Close</button>
+                  </div>
+                </div>
+            </div>
+           
+          </div>
+
+
+          
+    </div>
+</body>
+</html>
